@@ -1,6 +1,6 @@
 import * as users from "../users.json" assert { type: "json" };
 
-export const login = (req, res) => {
+export const getUser = (req, res) => {
   try {
     let data = users.default.filter((obj) => {
       return req.body.number
