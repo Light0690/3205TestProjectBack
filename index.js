@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 app.post("/login", usersValidate, handleValidationErrors, getUser);
 
-app.listen(PORT, (err) => {
+app.listen(process.env.PORT || PORT, (err) => {
   if (err) {
     return console.log(err);
   }
